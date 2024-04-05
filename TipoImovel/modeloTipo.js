@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
+const conexao = require('../Conexao/conexao');
 
-const tipoImovel = conexao.define('tipoImovel', {
+const TipoImovel = conexao.define('tipoImovel', {
     codTipoImovel: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -16,8 +16,8 @@ const tipoImovel = conexao.define('tipoImovel', {
     timestamps: false
 });
 
-tipoImovel.sync({
+TipoImovel.sync({
     alter: true
 });
 
-module.exports = tipoImovel;
+module.exports = TipoImovel;

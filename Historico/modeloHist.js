@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
+const conexao = require('../Conexao/conexao');
 const Imovel = require('../Imovel/modeloImo');
 const Cliente = require('../Cliente/modeloCli');
 const Corretor = require('../Corretor/modeloCorre');
@@ -39,7 +39,7 @@ const Historico = conexao.define('historico', {
         onDelete: 'CASCADE'
     },
     dataNegociacao: {
-        type: Sequelize.DATETIME,
+        type: Sequelize.DATE,
         allowNull: false
     },
     percentualComissao: {

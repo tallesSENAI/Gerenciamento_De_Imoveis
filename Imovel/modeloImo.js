@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
+const conexao = require('../Conexao/conexao');
 const tipoImovel = require('../TipoImovel/modeloTipo');
 const Endereco = require('../Endereco/modeloEnde');
 

@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
+const conexao = require('../Conexao/conexao');
 const Endereco = require('../Endereco/modeloEnde')
 
 const Corretor = conexao.define('corretor', {
@@ -12,7 +12,6 @@ const Corretor = conexao.define('corretor', {
     codEndereco: { //FK
         type: Sequelize.INTEGER,
         allowNull: false,
-        autoIncrement: true,
         references: {
             model: Endereco,
             key: 'codEndereco',

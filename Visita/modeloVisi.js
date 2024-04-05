@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const conexao = require('../conexao/conexao');
+const conexao = require('../Conexao/conexao');
 const Imovel = require('../Imovel/modeloImo');
 const Cliente = require('../Cliente/modeloCli');
 
@@ -8,7 +8,6 @@ const Visita = conexao.define('visita', {
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true, 
-        autoIncrement: true,
         references: {
             model: Imovel,
             key: 'codImovel',
@@ -19,7 +18,6 @@ const Visita = conexao.define('visita', {
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true, 
-        autoIncrement: true,
         references: {
             model: Cliente,
             key: 'codCliente',
@@ -27,11 +25,11 @@ const Visita = conexao.define('visita', {
         onDelete: 'CASCADE'
     },
     dataVisita: {
-        type: Sequelize.DATETIME,
+        type: Sequelize.DATE,
         allowNull: false
     },
     visitaRealizada: {
-        type: Sequelize.BIT,
+        type: Sequelize.BOOLEAN,
         allowNull: false
     }
 }, {
